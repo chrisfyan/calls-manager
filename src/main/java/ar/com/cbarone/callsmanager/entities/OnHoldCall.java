@@ -1,5 +1,6 @@
 package ar.com.cbarone.callsmanager.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -37,6 +38,13 @@ public class OnHoldCall {
 	
 	public String getTimeWaited(){
 		Interval interval = new Interval(this.timeAssigned.getTime(), Calendar.getInstance().getTime().getTime());
-		return "Time on hold: " + interval.toString();
+		return "Time on hold: " + this.formatTime(interval.toDurationMillis());
+	}
+	
+	private String formatTime(long millis) {
+	    SimpleDateFormat sdf = new SimpleDateFormat("mm:ss.SSS");
+
+	    String strDate = sdf.format(millis);
+	    return strDate;
 	}
 }

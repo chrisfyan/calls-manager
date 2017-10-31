@@ -10,3 +10,7 @@ propio para distinguirlos. Se utiliza el objeto instanciado para definir la prio
 -OnHoldQueue es la clase encargada del manejo de las llamadas en espera y observadora de
 Dispatcher para detectar cuando hay un operador libre
 -Se crearon 4 test unitarios, en su mayoría para probar varias concurrencias
+
+Para los ejercicios adicionales:
+-Se crea una cola de espera para cuando se superan las 10 llamadas. Las mismas se iran liberando
+en orden a medida que se liberan operadores
