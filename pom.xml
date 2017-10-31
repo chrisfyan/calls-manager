@@ -10,6 +10,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<runSuite>**/AllTests.class</runSuite>
 	</properties>
 
 	<dependencies>
@@ -73,6 +74,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.16</version>
+					<configuration>
+						<includes>
+							<include>${runSuite}</include>
+						</includes>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
